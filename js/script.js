@@ -8,10 +8,16 @@ function setSpecialsLink() {
     const specialsLink = document.querySelector('#specials-link');
     if (specialsLink) {
         const randomCategory = getRandomCategory();
-        specialsLink.setAttribute('onclick', `$dc.loadMenuItems('${randomCategory}');`);
+        specialsLink.setAttribute('onclick', `loadMenuItems('${randomCategory}');`);
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     setSpecialsLink();
 });
+
+// Dummy implementation for testing purposes
+function loadMenuItems(category) {
+    alert(`Loading menu items for: ${category}`);
+    // Replace with your actual function logic
+}
